@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        {% for use in users %}
+           <div class="table">
+              name:  {{use.0}}<br>
+               bio:  {{use.3}}<br>
+               experience:  {{use.4}}
+               <a href="mailto:{{use.1}}">connect</a><br>
+            </div>
+        {% endfor %}
+</div>
+<style>
+    body{
+        background-color: black;
+        color: white;
+        text-align: center;
+        gap:5px
+    }
+    .table{
+        
+        background-color: bisque;
+        color: black;
+        border: 2px solid white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
+</body>
+</html>

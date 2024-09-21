@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    {% load static %}
+    
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+
+        }
+        form{
+            background-color: black;
+            color: white;
+            height: 500px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            border-radius: 40px;
+            gap: 0px;
+        }
+        a{
+            color:bisque;
+            text-decoration: none;
+        }
+        a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <h1 id="he">REGISTER</h1>
+        <label>Username</label>
+        <input  type="text" name="name"  required><br>
+        <label>Email</label>
+        <input type="email" name="email" required><br>
+        <label>Phone Number</label> 
+        <input type="text" name="phonenumber" required><br>
+        <label>Bio</label>
+        <textarea name="bio"></textarea>
+        <label>Experience</label>
+        <textarea name="experience"></textarea>
+        <label>Password</label>
+        <input type="password" name="password"  required><br>
+        <button type="submit" id="register"> register</button><br>
+        <p>have account ?<a href="{%url 'balog'%}">login</a> </p>
+    </form>
+</body>
+</html>
